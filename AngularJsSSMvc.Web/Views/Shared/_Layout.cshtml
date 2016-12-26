@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Rent That Bike!</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    @*@Styles.Render("~/Content/css")*@
+</head>
+<body ng-controller="applicationController">
+    <header>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" ng-click="isMainMenuCollapsed = !isMainMenuCollapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Rent That Bike!</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" data-collapse="isMainMenuCollapsed">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/rentals">Rentals</a></li>
+                        <li><a href="#/customers">Customers</a></li>
+                        <li><a href="#/bicycles">Bicycles</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <section>
+        @RenderBody()
+    </section>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/ui-bootstrap-0.10.0.js"></script>
+    <script src="scripts/moment.js"></script>
+    <script src="scripts/app/App.js"></script>
+    <script src="scripts/App/services/BicyclesService.js"></script>
+    <script src="scripts/App/services/CustomersService.js"></script>
+    <script src="scripts/App/services/RentalService.js"></script>
+    <script src="scripts/App/controllers/applicationController.js"></script>
+    <script src="scripts/App/controllers/BicyclesController.js"></script>
+    <script src="scripts/App/controllers/BicycleController.js"></script>
+    <script src="scripts/App/controllers/CustomersController.js"></script>
+    <script src="scripts/App/controllers/CustomerController.js"></script>
+    <script src="scripts/App/controllers/RentalsController.js"></script>
+    <script src="scripts/App/controllers/RentalController.js"></script>
+    @*@Scripts.Render("~/bundles/basejs")
+        @Scripts.Render("~/bundles/angular")
+        @Scripts.Render("~/bundles/app")
+        @RenderSection("scripts", required: false)*@
+</body>
+</html>
